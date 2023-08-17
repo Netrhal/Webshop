@@ -6,6 +6,31 @@
     <meta charset="utf-8" />
 </head>
 <body>
-<p>Hello world!</p>
+<h1>My Shop</h1>
+<a href="/only-available">ONLY AVAILBLE</a>
+<a href="/cheapest-first">CHEAPEST FIRST</a>
+<br>
+<form action="/"method="get">
+    <input type="text" name="name" th:value="${name}">
+    <button type="submit">Search</button>
+</form>
+<table>
+    <thead class="listheader">
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Quantity</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="shopitem : ${itemList}" th:object="${shopitem}">
+            <td th:text="*{getName()}"></td>
+            <td th:text="*{getDescription()}"></td>
+            <td class="centered" th:text="*{getPrice()}"></td>
+            <td class="centered" th:text="*{getQuantity()}"></td>
+        </tr>
+    </tbody>
+</table>
 </body>
 </html>

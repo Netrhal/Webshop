@@ -1,0 +1,29 @@
+body {
+    width: auto;
+    margin: 0;
+    font-family: Arial;
+}
+table {
+    line-height: 60px;
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+}
+.listheader {
+    background-color: aqua;
+    font-size: 40px;
+}
+.centered {
+    text-align: center;
+}
+a:link, a:visited {
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+}
